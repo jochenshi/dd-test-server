@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
     console.log(result);
     return new Response(result.data);
   } catch (err: any) {
-    console.log(err.data);
+    console.log(err);
     return new Response(err.data?.message || '请求失败');
   }
 }
