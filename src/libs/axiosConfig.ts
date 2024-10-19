@@ -20,7 +20,6 @@ axiosInstance.interceptors.response.use(
     return conf.data;
   },
   (error) => {
-    console.log(error);
-    throw error;
+    throw error.response;
   }
 )
